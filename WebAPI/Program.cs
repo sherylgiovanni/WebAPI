@@ -7,10 +7,8 @@ namespace WebAPI
     {
         public static void Main(string[] args)
         {
-            // Initialize NHibernate
             NHibernateHelper nhHelper = new NHibernateHelper();
 
-            // Initialize your repositories with the NHibernate session
             IStudentRepository studentRepository = new StudentRepository(nhHelper.OpenSession());
 
             var builder = WebApplication.CreateBuilder(args);
