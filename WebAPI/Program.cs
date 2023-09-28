@@ -10,6 +10,10 @@ namespace WebAPI
             NHibernateHelper nhHelper = new NHibernateHelper();
 
             IStudentRepository studentRepository = new StudentRepository(nhHelper.OpenSession());
+            IProfessorRepository professorRepository = new ProfessorRepository(nhHelper.OpenSession());
+            ICourseRepository courseRepository = new CourseRepository(nhHelper.OpenSession());
+            ICourseProfessorRepository courseProfessorRepository = new CourseProfessorRepository(nhHelper.OpenSession());
+            IEnrollmentRepository enrollmentRepository = new EnrollmentRepository(nhHelper.OpenSession());
 
             var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +25,10 @@ namespace WebAPI
             });
             
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
+            builder.Services.AddScoped<ICourseProfessorRepository, CourseProfessorRepository>();
 
             builder.Services.AddControllers();
             

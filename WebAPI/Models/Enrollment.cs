@@ -2,7 +2,7 @@
 
 namespace WebAPI.Models
 {
-    class Enrollment
+    public class Enrollment
     {
         [JsonPropertyName("ENROLLMENT_ID")]
         public virtual string ENROLLMENT_ID { get; set; }

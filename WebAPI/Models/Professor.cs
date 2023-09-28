@@ -2,7 +2,7 @@
 
 namespace WebAPI.Models
 {
-    class Professor
+    public class Professor
     {
         [JsonPropertyName("EMPLID")]
         public virtual string EMPLID { get; set; }
