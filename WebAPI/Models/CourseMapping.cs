@@ -11,6 +11,7 @@ namespace WebAPI.Models
             Map(x => x.COURSE_CODE);
             Map(x => x.COURSE_NAME);
             Map(x => x.COURSE_SECTION);
+            Map(x => x.COURSE_DESC);
             Map(x => x.CREDITS);
         }
     }

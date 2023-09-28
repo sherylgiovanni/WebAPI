@@ -13,6 +13,9 @@ namespace WebAPI.Models
         [JsonPropertyName("COURSE_CODE")]
         public virtual string COURSE_CODE { get; set; }
 
+        [JsonPropertyName("COURSE_DESC")]
+        public virtual string COURSE_DESC { get; set; }
+
         [JsonPropertyName("COURSE_SECTION")]
         public virtual string COURSE_SECTION { get; set; }
 
